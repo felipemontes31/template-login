@@ -1,0 +1,125 @@
+ 
+
+      /* 1. Ajustes Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to left, #FDA69B, #FB4E37,#FF3B3B);
+    min-height: 100vh; /* Garante que o fundo cubra a tela toda */
+    display: flex;
+    flex-direction: column; /* Faz os elementos ficarem um abaixo do outro */
+    align-items: center;    /* Centraliza o conteúdo horizontalmente */
+    padding: 20px;
+}
+
+/* 2. Cabeçalho e Logo */
+.main-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Espaço entre o logo e o grid */
+}
+
+.logo {
+    width: 50%; /* Tamanho que estava no seu código original */
+    height: 200px;
+    display: block;
+}
+/* TELA PRINCIPLA DO HTML */
+/* Container do Grid - Agora transparente para destacar os cards individuais */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 650px; 
+    margin: 20px auto;
+    padding: 10px;
+}
+
+/* Estilo do CARD individual */
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #0e2659;
+    
+    /* Configurações do Card */
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco levemente transparente */
+    padding: 20px 10px;
+    border-radius: 15px;      /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    border: 1px solid rgba(#3A3A3C);
+    
+    transition: all 0.3s ease; /* Transição suave para o efeito de hover */
+}
+
+/* Efeito ao passar o mouse (Hover) */
+.grid-item:hover {
+    transform: translateY(-10px); /* O card sobe um pouquinho */
+    background-color: #dde5e9;    /* Fica totalmente branco */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra aumenta */
+    border-color: #3a70a7;        /* Borda ganha cor */
+}
+
+/* Ajuste dos ícones dentro do card */
+.grid-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 12px;
+}
+
+/* Ajuste do texto */
+.grid-item span {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase; /* Texto em maiúsculo para estilo */
+    letter-spacing: 0.5px;
+}
+
+                    /*TELA DE LOGIN DO HTML*/
+
+ label {
+            display: flex;
+            text-align:center;
+            font-size: 18px;
+            color: #0e2659;
+            margin-bottom: 20px;
+            margin-left: 70px;
+        }
+        input[type="text"],
+            input[type="password"]{
+                width: 100%;
+                padding: 15px;
+                margin-bottom: 20px;
+                border-radius: 25px;
+                border: none;
+                background-color: rgba(255, 255, 255, 0.9);
+                font-size: 1em;
+                color: #0e2659;
+                
+            }
+            input[type="button"] {
+                width: 100%;
+                padding: 15px;
+                background:linear-gradient(#FDA69B, #FB4E37 );
+                color: #0e2659;
+                border: none;
+                border-radius: 25px;
+                font-size: 1em;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+            input[type="button"]:hover {
+                background:linear-gradient(#FDA69B, #FB4E37,#FF3B3B);
+                cursor: pointer;
+                box-sizing: border-box;
+            }
