@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endereço</title>
+
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="style/style.css">
+    <script src="scripts/script.js"></script>
+     <center>
+        <h2>CADASTRE SEU ENDEREÇO</h2>
+    </center>
+
+</head>
+
+<body>
+     <input type="button" value="SAIR" onclick="logof()">
+
+     <header class="main-header">
+        <img src="Guia de Estilo/Logotipos/3.png" alt="Logo-tipo" class="logo">
+    </header>
+    
+      <form class="formulario-grid">
+    <!-- Coluna 1 -->
+    <div class="campo">
+        <label>Logradouro:</label>
+        <input type="text" id="logradouro" name="logradouro">
+    </div>
+
+    <!-- Coluna 2 -->
+    <div class="campo">
+        <label>Número:</label>
+        <input type="text" id="numero" name="numero">
+    </div>
+
+    <!-- Coluna 1 -->
+    <div class="campo">
+        <label>Complemento:</label>
+        <input type="text" id="complemento" placeholder="AP: BL: QD.." name="complemento">
+    </div>
+
+    <!-- Coluna 2 -->
+    <div class="campo">
+        <label>Bairro:</label>
+        <input type="text" id="bairro" name="bairro">
+    </div>
+
+    <!-- Coluna 1 -->
+    <div class="campo">
+        <label>Estado:</label>
+         <select name="estado" id="estado">
+             <option value=" " disabled selected hidden>Selecione o Estado</option>
+                    <option value="ACRE">AC</option>
+                    <option value="ALAGOAS">AL</option>
+                    <option value="AMAPA">AP</option>
+                    <option value="AMAZONAS">AM</option>
+                    <option value="BAHIA">BA</option>
+                    <option value="CEARÁ">CE</option>
+                    <option value="DISTRITO FEDERAL">DF</option>
+                    <option value="ESPIRITO SANTO">ES</option>
+                    <option value="GOIAS">GO</option>
+                    <option value="MARANHAO">MA</option>
+                    <option value="MATO GROSSO">MT</option>
+                    <option value="MATO GROSSO DO SUL">MS</option>
+                    <option value="MINAS GERAIS">MG</option>
+                    <option value="PARA">PA</option>
+                    <option value="PARAIBA">PB</option>
+                    <option value="PARANA">PR</option>
+                    <option value="PERNAMBUCO">PE</option>
+                    <option value="PIAUI">PI</option>
+                    <option value="RIO DE JANEIRO">RJ</option>
+                    <option value="RIO GRANDE DO NORTE">RN</option>
+                    <option value="RIO GRANDE DO SUL">RS</option>
+                    <option value="RONDONIA">RO</option>
+                    <option value="RORAIMA">RR</option>
+                    <option value="SANTA CATARINA">SC</option>
+                    <option value="SAO PAULO">SP</option>
+                    <option value="SERGIPE">SE</option>
+                    <option value="TOCANTINS">TO</option>
+       
+        </select>
+    </div>
+
+    <!-- Coluna 2 -->
+    <div class="campo">
+        <label>Tipo:</label>
+        <select name="tipo" id="tipo">
+            <option value="" disabled selected hidden>Tipo de endereço</option>
+            <option value="residencial">Residencial</option>
+            <option value="comercial">Comercial</option>
+            <option value="outros">Outros</option>
+        </select>
+    </div>
+
+    <!-- Coluna 1 -->
+    <div class="campo">
+        <label>Cep:</label>
+        <input type="text" id="cep" name="cep">
+    </div>
+
+       <!-- Coluna 2 -->
+    <div class="campo">
+        <label>Cidade:</label>
+        <input type="text" id="cidade" name="cidade">
+    </div>
+
+    <!-- Botão ocupando as duas grades -->
+    <input type="button" value="CADASTRAR" " onclick="cadastrarend()">
+</form> <!-- Não esqueça de fechar aqui -->
+
+    
+</body>
+</html>
