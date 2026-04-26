@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendimento</title>
+    <input type="button" value="SAIR" onclick="logof()">
+    <center>
+        <h2>ATENDIMENTO</h2>
+    </center>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="scripts/script.js"></script>
+
+</head>
+
+<body>
+
+    <header class="main-header">
+        <img src="Guia de Estilo/Logotipos/3.png" alt="Logo-tipo" class="logo">
+    </header>
+
+    <form>
+
+        <div class="campo">
+            <label>Cliente:</label>
+            <input type="text" value="cliente" id="cliente"><br>
+        </div>
+        <div class="campo">
+            <label>Profissional:</label>
+            <input type="text" value="profissional" id="profissional"><br>
+        </div>
+        <div class="campo">
+            <label>Servico:</label>
+            <input type="text" value="servico" id="servico"><br>
+        </div>
+        <div class="campo">
+            <label>Data:</label>
+            <input type="text" value="data" id="data"><br>
+        </div>
+        <div class="campo">
+            <label>Status:</label>
+            <select name="status" id="status">
+                <option value=" " disabled selected hidden></option>
+                <option value="AGENDADO">AGENDADO</option>
+                <option value="CONCLUÍDO">CONCLUÍDO</option>
+                <option value="CANCELADO">CANCELADO</option>
+                <option value="REMARCAR">REMARCAR</option>
+                <option value="OUTROS">OUTROS...</option>
+            </select><BR>
+    
+        </div>
+
+         <div class="grupo-botoes">
+            <input type="button" value="CADASTRAR" onclick="cadastrar()">
+            <input type="button" value= "   VOLTAR   " onclick="voltar()">
+        </div>
+
+
+
+
+    </form>
+</body>
+
+</html>
