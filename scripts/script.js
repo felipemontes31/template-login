@@ -1,22 +1,52 @@
 function logar(){
 
-        let login = document.getElementById('login').value;
-        let senha = document.getElementById('senha').value;
+        let login1 = document.getElementById('login').value;
+        let senha1 = document.getElementById('senha').value;
         
-        let status = " "
+        if (login1 == "admin" && senha1 == "admin") {
+        localStorage.setItem("perfil", "GESTOR");
+        localStorage.setItem("usuario", login1);
 
-        if(login === "admin" || login === "operacional" && senha === "admin" || senha === "opec2026"){
+        alert("Seja Bem Vindo, " + login1);
+        window.location.href = "telaprincipal.html";
 
-            alert ('Seja Bem Vindo!!!')
-           window.location.href="telaprincipal.html"
+    } else if (login1 == "operacional" && senha1 == "opec2026") {
+        localStorage.setItem("perfil", "ATENDIMENTO");
+        localStorage.setItem("usuario", login1);
 
-        }else{ 
+        alert("Seja Bem Vindo, " + login1);
+        window.location.href = "telaprincipal.html";
 
-            alert ('Usuário não cadastrado!!!')
-             window.location.href="index.html"
-        }
+    } else {
+        alert("Email ou Usuário inválidos.");
+        document.getElementById('senha').value = "";
+    }
 
 }
+
+// ================= AO CARREGAR =================
+document.addEventListener("DOMContentLoaded"), function () {
+
+    // Mostrar usuário logado
+    const perfil = localStorage.getItem("perfil");
+    const usuario = localStorage.getItem("usuario");
+    const campoUsuario = document.getElementById("usuariologado");
+
+    if (perfil && usuario && campoUsuario) {
+        campoUsuario.innerText = usuario + " - " + perfil;
+    }
+
+    }
+//  Controle de cards por perfil
+    const gridcontainer = document.querySelectorAll("grid-item");
+
+    gridcontainer.forEach(griditem => {
+        const permitido = griditem.getAttribute("data-perfil");
+
+        if (permitido && !permitido.includes(perfil)) {
+            griditem.style.display = "none";
+        }
+    });
 
         /* Funções da página Produto*/
 
