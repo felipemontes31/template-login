@@ -6,6 +6,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+h2 {
+    text-align: center;
+    font-style: italic;
+    text-decoration:underline;
+}
 
 body {
     
@@ -31,7 +36,7 @@ body {
     height: 200px;
     display: block;
 }
-/* TELA PRINCIPLA DO HTML */
+/* TELA PRINCIPAL DO HTML */
 /* Container do Grid - Agora transparente para destacar os cards individuais */
 .grid-container {
     display: grid;
@@ -107,7 +112,10 @@ body {
                 color: #0e2659;
                 
             }
-            input[type="button"] {
+            input[value="CADASTRAR"],
+             input[value="LOGAR"]
+             {
+                
                 width: 100%;
                 padding: 15px;
                 background:linear-gradient(#FDA69B, #FB4E37 );
@@ -117,9 +125,86 @@ body {
                 font-size: 1em;
                 cursor: pointer;
                 margin-top: 10px;
+               
             }
-            input[type="button"]:hover {
+            input[value="CADASTRAR"],
+            input[value="LOGAR"]:hover {
                 background:linear-gradient(#FDA69B, #FB4E37,#FF3B3B);
                 cursor: pointer;
                 box-sizing: border-box;
             }
+
+             input[value="   VOLTAR   "]{
+                width: 100%;
+                padding: 15px;
+                background: color #c7c9d9;;
+                color: #0e2659;
+                border: none;
+                border-radius: 25px;
+                font-size: 1em;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+
+            input[value="   VOLTAR   "]:hover {
+                background-color: #6B7588 ;
+                cursor: pointer;
+                box-sizing: border-box;
+            }
+            input[value="SAIR"]{
+                display: flex;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 10%;
+                padding: 5px;
+                background-color: #c7c9d9;
+                cursor: pointer;
+                border-radius: 25px;
+                box-sizing: border-box;
+                margin-top: 10px;
+            }
+
+.grupo-botoes{
+     display: grid;
+     grid-template-columns: auto auto; /* Cria duas colunas automáticas */
+     gap: 10px;
+}
+
+        /*FORMULÁRIO ENDEREÇO COM DUAS COLUNAS */
+
+    select{
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 25px;
+            border: none;
+            background-color: rgb(168, 217, 168), 217, 168;
+            font-size: 1em;
+            color: #1b0707;
+        }
+.formulario-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+        gap: 15px; /* Espaço entre os campos */
+        max-width: 600px;
+    }
+
+    /* Faz o botão ocupar as duas colunas */
+    .btn-enviar {
+        grid-column: span 2; 
+        padding: 10px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    /* Estilização básica para os campos ocuparem a largura total da coluna */
+    .campo {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    input, select {
+        padding: 8px;
+        width: 100%;
+        box-sizing: border-box;
+    }
