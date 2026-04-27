@@ -13,7 +13,7 @@ function logar(){
         }else{ 
 
             alert ('Usuário não cadastrado!!!')
-             window.location.href="login.html"
+             window.location.href="index.html"
         }
 
 }
@@ -26,7 +26,7 @@ function cadastrarproduto(){
     let tipo = document.getElementById('tipo').value;
 
     alert ('Produto Cadastrado com Sucesso!!!')
-    window.location.href="telaprincipal.html"
+    window.location.href="Produto.html"
 
 }
 
@@ -42,7 +42,7 @@ function cadastrarendereco(){
     let cidade = document.getElementById('cidade').value;
 
     alert ('Endereço Cadastrado com Sucesso!!!')
-    window.location.href="telaprincipal.html"
+    window.location.href="endereco.html"
 }
 
 function cadastrarprofissional(){
@@ -52,7 +52,7 @@ function cadastrarprofissional(){
     let cpf = Number(document.getElementById('cpf')).value;
 
     alert ('Profissional Cadastrado com Sucesso!!!')
-    window.location.href="telaprincipal.html"
+    window.location.href="profissional.html"
 }
 
 function cadastraratendimento(){
@@ -63,7 +63,7 @@ function cadastraratendimento(){
     let data = document.getElementById('data').value;
     let status = document.getElementById('status').value;
     alert ('Atendimento Cadastrado com Sucesso!!!')
-    window.location.href="telaprincipal.html"
+    window.location.href="atendimento.html"
 }
 
 function cadastrarservico(){
@@ -72,7 +72,7 @@ function cadastrarservico(){
     let descricao = document.getElementById('descricao').value;
     let preco = Number(document.getElementById('preco')).value;
     alert ('Serviço Cadastrado com Sucesso!!!')
-    window.location.href="telaprincipal.html"
+    window.location.href="servico.html"
 }
 
 function cadastrarfornecedor(){
@@ -81,7 +81,7 @@ function cadastrarfornecedor(){
     let razao = document.getElementById('razao').value;
     let cnpj = Number(document.getElementById('cnpj')).value;
     alert ('Fornecedor Cadastrado com Sucesso!!!')
-    window.location.href="telaprincipal.html"
+    window.location.href="fornecedor.html"
 }
 
 function cadastrarclientes(){
@@ -90,7 +90,7 @@ function cadastrarclientes(){
     let data = document.getElementById('datanascimento').value;
     let cpf =  Number(document.getElementById('cpf')).value;    
     alert ('Cliente Cadastrado com Sucesso!!!');
-    window.location.href="telaprincipal.html"
+    window.location.href="cliente.html"
 }
 
 function voltar(){

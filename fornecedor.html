@@ -21,13 +21,22 @@
     </header>
 
     <form>
-
-        <label>Nome</label>
+        <div class="campo">
+        <label>Nome:</label>
         <input type="text" value="nome" id="nome"><br><br>
+        </div>
+
+        <div class="campo">
+        <label>Razão Social:</label>
         <input type="text" value="razao" id="razao"><br><br>
+        </div>
+
+        <div class="campo">
+        <label>CNPJ:</label>
         <input type="text" value="cnpj" id="cnpj"><br><br>
+        </div>
          <div class="grupo-botoes">
-            <input type="button" value="CADASTRAR" onclick="cadastrar()">
+            <input type="button" value="CADASTRAR" onclick="cadastrarfornecedor()">
             <input type="button" value= "   VOLTAR   " onclick="voltar()">
         </div>
     </form>
