@@ -25,7 +25,7 @@ function logar(){
 }
 
 // ================= AO CARREGAR =================
-document.addEventListener("DOMContentLoaded"), function () {
+document.addEventListener("DOMContentLoaded", function () {
 
     // Mostrar usuário logado
     const perfil = localStorage.getItem("perfil");
@@ -35,10 +35,21 @@ document.addEventListener("DOMContentLoaded"), function () {
     if (perfil && usuario && campoUsuario) {
         campoUsuario.innerText = usuario + " - " + perfil;
     }
+     //  Bloqueio de acesso
+    // const pagina = window.location.pathname.split("/").pop();
 
+    // if (!perfil && pagina !== "index.html") {
+    //    window.location.href = "index.html";
+    // }
+    const paginaAtual = window.location.pathname;
+    if (
+        !perfil && !paginaAtual.includes("index.html") && !paginaAtual.includes("login.html")
+    ) {
+        window.location.href = "index.html";
     }
+    
 //  Controle de cards por perfil
-    const gridcontainer = document.querySelectorAll("grid-item");
+    const gridcontainer = document.querySelectorAll(".griditem");
 
     gridcontainer.forEach(griditem => {
         const permitido = griditem.getAttribute("data-perfil");
@@ -122,7 +133,7 @@ function cadastrarclientes(){
     alert ('Cliente Cadastrado com Sucesso!!!');
     window.location.href="cliente.html"
 }
-
+});
 function voltar(){
 
     window.location.href= "telaprincipal.html"
