@@ -11,8 +11,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
-    <script src="scripts/script.js"></script>
-
+   
 </head>
 <body>
     <header class="main-header">
@@ -43,7 +42,7 @@
 
          <div class="campo">
          <label>CPF:</label>
-         <input type="text" value="cpf" id="cpf"><br>
+         <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00"><br>
          </div>
 
           <div class="grupo-botoes">
@@ -51,5 +50,7 @@
             <input type="button" value= "   VOLTAR   " onclick="voltar()">
         </div>
     </form>
+     <script src="https://unpkg.com/imask"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>

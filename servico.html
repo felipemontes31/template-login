@@ -11,8 +11,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
-    <script src="scripts/script.js"></script>
-
+   
+    <script src="https://unpkg.com/imask"></script>
 </head>
 <body>
     <header class="main-header">
@@ -37,7 +37,7 @@
         </div>
         <div class="campo">
         <label>Preco:</label>
-        <input type="text" value="preco" id="preco"><br><br>
+        <input type="text" name="preco" id="preco" placeholder="R$ 000,00"><br><br>
         </div>
         
         <div class="grupo-botoes">
@@ -45,6 +45,8 @@
             <input type="button" value= "   VOLTAR   " onclick="voltar()">
         </div>
     </form><br>
-
+    <script src="https://unpkg.com/imask"></script>
+    <script src="scripts/script.js"></script>
 </body>
+
 </html>

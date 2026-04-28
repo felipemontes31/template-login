@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 function logar(){
 
         let login1 = document.getElementById('login').value;
@@ -58,9 +65,11 @@ document.addEventListener("DOMContentLoaded", function () {
             griditem.style.display = "none";
         }
     });
+    });
+    
 
-        /* Funções da página Produto*/
-
+        
+             /* Funções da página Produto*/
 function cadastrarproduto(){
 
     let produto = document.getElementById('produto').value;
@@ -70,9 +79,10 @@ function cadastrarproduto(){
     window.location.href="Produto.html"
 
 }
+    
 
 function cadastrarendereco(){
-
+    
     let logradouro = document.getElementById('logradouro').value;
     let numero = Number(document.getElementById('numero')).value;
     let complemento = document.getElementById('complemento').value;
@@ -106,15 +116,17 @@ function cadastraratendimento(){
     alert ('Atendimento Cadastrado com Sucesso!!!')
     window.location.href="atendimento.html"
 }
-
+    
 function cadastrarservico(){
-
+    
     let nome = document.getElementById('nome').value;
     let descricao = document.getElementById('descricao').value;
     let preco = Number(document.getElementById('preco')).value;
     alert ('Serviço Cadastrado com Sucesso!!!')
     window.location.href="servico.html"
+
 }
+        
 
 function cadastrarfornecedor(){
 
@@ -133,7 +145,7 @@ function cadastrarclientes(){
     alert ('Cliente Cadastrado com Sucesso!!!');
     window.location.href="cliente.html"
 }
-});
+
 function voltar(){
 
     window.location.href= "telaprincipal.html"
@@ -143,4 +155,32 @@ function logof(){
 
     window.location.href= "index.html"
 }
+        
+    
+ // CPF - Correto
+const cpfElement = document.getElementById('cpf');
+if (cpfElement) IMask(cpfElement, { mask: '000.000.000-00' });
 
+// CEP - Corrigido: 'mask' com m minúsculo
+const cepElement = document.getElementById('cep');
+if (cepElement) IMask(cepElement, { mask: '00.000-000' });
+
+// CNPJ - Corrigido: 'mask' com m minúsculo
+const cnpjElement = document.getElementById('cnpj');
+if (cnpjElement) IMask(cnpjElement, { mask: '00.000.000/0000-00' });
+
+// PREÇO - Corrigido: Usando máscara numérica para moeda
+const precoElement = document.getElementById('preco');
+if (precoElement) {
+    IMask(precoElement, {
+        mask: 'R$ num',
+        blocks: {
+            num: {
+                mask: Number,
+                thousandsSeparator: '.',
+                padFractionalZeros: true,
+                radix: ','
+            }
+        }
+    });
+}

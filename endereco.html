@@ -7,7 +7,7 @@
 
      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="style/style.css">
-    <script src="scripts/script.js"></script>
+    
      <center>
         <h2>CADASTRE SEU ENDEREÇO</h2>
     </center>
@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    
      <input type="button" value="SAIR" onclick="logof()">
 
      <header class="main-header">
@@ -96,7 +97,7 @@
     <!-- Coluna 1 -->
     <div class="campo">
         <label>Cep:</label>
-        <input type="text" id="cep" name="cep">
+        <input type="text" id="cep" name="cep" placeholder="00.000-000">
     </div>
 
        <!-- Coluna 2 -->
@@ -110,6 +111,8 @@
     <input type="button" value= "   VOLTAR   " onclick="voltar()">
 </form> <!-- Não esqueça de fechar aqui -->
 
+    <script src="https://unpkg.com/imask"></script>
+    <script src="scripts/script.js"></script>
     
 </body>
 </html>
